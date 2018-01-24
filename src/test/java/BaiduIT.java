@@ -22,8 +22,8 @@ public class BaiduIT {
 
     @BeforeTest
     public void beforeTest(){
-        System.setProperty("webdriver.chrome.driver","src/test/resources/chromedriver");
-        driver = new ChromeDriver();
+        System.setProperty("webdriver.gecko.driver","src/test/resources/geckodriver");
+        driver = new FirefoxDriver();
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("http://www.baidu.com");
