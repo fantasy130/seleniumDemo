@@ -1,0 +1,6 @@
+*.iml
+*.idea
+*.sonar
+*.DS_Store
+/.idea/
+/target/
