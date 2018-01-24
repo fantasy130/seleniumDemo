@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -21,8 +22,8 @@ public class BaiduIT {
 
     @BeforeTest
     public void beforeTest(){
-        System.setProperty("webdriver.gecko.driver","src/test/resources/geckodriver");
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver","src/test/resources/chromedriver");
+        driver = new ChromeDriver();
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("http://www.baidu.com");
