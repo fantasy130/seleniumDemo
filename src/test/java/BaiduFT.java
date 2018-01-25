@@ -37,7 +37,6 @@ public class BaiduFT {
     @Test
     public void indexSearch_searchWithBankName_officialSiteInSearchResult() throws Exception
     {
-        System.out.println("heloo");
         By inputBox = By.id("kw");
         By searchButton = By.id("su");
 
