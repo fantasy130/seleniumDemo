@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class BaiduIT {
+public class BaiduFT {
 
     private WebDriver driver;
 
