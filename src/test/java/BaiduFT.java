@@ -16,8 +16,6 @@ public class BaiduFT {
 
     private WebDriver driver;
 
-
-
     @BeforeTest
     public void beforeTest(){
         System.setProperty("webdriver.gecko.driver","src/test/resources/geckodriver");
@@ -25,11 +23,6 @@ public class BaiduFT {
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("http://www.baidu.com");
-    }
-
-    @AfterTest
-    public void afterTest(){
-        driver.quit();
     }
 
     @Test
@@ -47,8 +40,12 @@ public class BaiduFT {
 
     }
 
+    @AfterTest
+    public void afterTest(){
+        driver.quit();
+    }
 
-    public void waitForElement(WebDriver driver,int timeOut, final By by) {
+    private void waitForElement(WebDriver driver,int timeOut, final By by) {
         try {
             (new WebDriverWait(driver, timeOut)).until(new ExpectedCondition<Boolean>() {
                 public Boolean apply(WebDriver driver) {
