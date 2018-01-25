@@ -37,7 +37,8 @@ public class BaiduFT {
         Thread.sleep(5000);
         driver.findElement(searchButton).click();
         Thread.sleep(5000);
-
+        WebElement index = driver.findElement(By.linkText("兴业银行欢迎您"));
+        Assert.assertNotNull(index);
     }
 
     @AfterTest
